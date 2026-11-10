@@ -16,7 +16,7 @@ btn.addEventListener("click", function(event) {
    let promise = new Promise((resolve, reject) => {
     setTimeout(() => {
         if(Number(userAge) > 18) {
-            resolve(`Welcome, ${userAge} . You can vote.`)
+            resolve(`Welcome, ${userName} . You can vote.`)
         } else {
             reject(`Oh sorry ${userName}. You aren't old enough.`)
         }
@@ -25,10 +25,10 @@ btn.addEventListener("click", function(event) {
 
 
    promise
-   .then((message) => {
-      alert(message)
-   })
-   .catch((error) => {
-      alert(error)
-   })
+        .then((name) => {
+            alert(`Welcome, ${name}. You can vote.`);
+        })
+        .catch((name) => {
+            alert(`Oh sorry ${name}. You aren't old enough.`);
+        });
 })
