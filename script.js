@@ -1,5 +1,3 @@
-//your JS code here. If required.
-
 const age = document.getElementById("age");
 const name = document.getElementById("name");
 const btn = document.getElementById("btn");
@@ -18,9 +16,9 @@ btn.addEventListener("click", function(event) {
    let promise = new Promise((resolve, reject) => {
     setTimeout(() => {
         if(Number(userAge) > 18) {
-            resolve("Welcome, . You can vote.")
+            resolve(`Welcome, ${userAge} . You can vote.`)
         } else {
-            reject("Oh sorry . You aren't old enough.")
+            reject(`Oh sorry ${userName}. You aren't old enough.`)
         }
     }, 4000);
    })
